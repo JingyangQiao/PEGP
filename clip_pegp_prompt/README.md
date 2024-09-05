@@ -4,7 +4,7 @@ First, clone our repository:
 
 ```
 git clone https://github.com/JingyangQiao/PEGP
-cd PEGP/clip-pegp-prompt
+cd PEGP/clip_pegp_prompt
 ```
 
 Then, install the packages with ```environment.yaml``` by: 
