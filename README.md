@@ -12,6 +12,8 @@ Official Pytorch implementation for "**Gradient Projection For Continual Paramet
 
 ```
 CLIP-PEGP-Prompt
+VIT-PEGP-Adapter
+VIT-PEGP-LoRA
 ```
 
 ### Coming Soon
@@ -19,9 +21,7 @@ CLIP-PEGP-Prompt
 ```
 VIT-PEGP-Prompt
 VIT-PEGP-Prefix
-VIT-PEGP-Adapter
-VIT-PEGP-LoRA
-CLIP-PEGP-Linear Adapter
+CLIP-PEGP-Linear Adapter (2025.10)
 ```
 
 ## License
