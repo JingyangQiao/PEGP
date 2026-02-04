@@ -105,8 +105,10 @@ class Ticlip(nn.Module):
         return self
 
     def generate(self, args):
-        temp_names = list(cifar100_classnames.values())
-        # temp_names = list(imagenet100_classnames.values())
+        if args["dataset"] == "cifar100":
+            temp_names = list(cifar100_classnames.values())
+        if args["dataset"] == "imagenet100":
+            temp_names = list(imagenet100_classnames.values())
         class_names = []
         for i in range(args["total_tasks"]):
             class_names.append(temp_names[10 * i:10 * i + 10])
@@ -119,4 +121,5 @@ class Ticlip(nn.Module):
         if mode == 2:
             image_features = self.image_encoder(image.type(self.dtype), self.image_prompt_pool_[0].weight)
             image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+
         return image_features
