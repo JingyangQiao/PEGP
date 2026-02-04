@@ -24,5 +24,4 @@
   "batch_size": 32,
   "weight_decay": 2e-4,
   "num_workers": 8
-
 }
