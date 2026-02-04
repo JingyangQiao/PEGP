@@ -51,8 +51,10 @@ class DataManager():
 
         data, targets = [], []
         for idx in indices:
-            class_data, class_targets = self._select(dataset, low_range=idx, high_range=idx + 1)
-            # class_data, class_targets = self._select_img(dataset, low_range=idx, high_range=idx + 1)
+            if self.dataset_name == "cifar100":
+                class_data, class_targets = self._select(dataset, low_range=idx, high_range=idx + 1)
+            if self.dataset_name == "imagenet100":
+                class_data, class_targets = self._select_img(dataset, low_range=idx, high_range=idx + 1)
             data.append(class_data)
             targets.append(class_targets)
         if appendent is not None and len(appendent) != 0:
@@ -140,4 +142,5 @@ class DummyDataset(Dataset):
 # set = manager.get_dataset(indices=indices, mode="train", appendent=None, ret_data=False)
 # print(set[0][1].size())
 # set = manager.get_dataset(indices=indices, mode="test", appendent=None, ret_data=False)
+
 # print(set[0][1].size())
