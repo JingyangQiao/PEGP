@@ -4,7 +4,7 @@ First, clone our repository:
 
 ```
 git clone https://github.com/JingyangQiao/PEGP
-cd PEGP/clip_pegp_prompt
+cd PEGP/clip_pegp_linear
 ```
 
 Then, install the packages with ```environment.yaml``` by: 
@@ -59,3 +59,4 @@ python main.py --config configs/imagenet100_split.json
 Experimental results of each task are provided in ```test_stats.txt``` file.
 
 Training weights can be obtained by contacting via email.
+
